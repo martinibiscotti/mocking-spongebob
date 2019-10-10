@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <string>
 using namespace std;
 
 int main()
@@ -10,9 +11,13 @@ int main()
   for (unsigned i = 0; i < sponge.length(); ++i)
   {
     if (unsigned bob = (rand() & 1) == 0)
+    {
       sponge[i] = tolower(sponge[i]);
+    }
     else
+    {
       sponge[i] = toupper(sponge[i]);
+    }
   }
 
   cout << sponge;

@@ -1,26 +1,18 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-using namespace std;
 
 int main()
 {
-  string sponge;
-  getline(cin, sponge);
+  std::string sponge;
+  getline(std::cin, sponge);
 
-  for (unsigned i = 0; i < sponge.length(); ++i)
+  for (int i = 0, bob = 0; i < sponge.length(); ++i, bob = rand() & 1)
   {
-    if (unsigned bob = (rand() & 1) == 0)
-    {
-      sponge[i] = tolower(sponge[i]);
-    }
-    else
-    {
-      sponge[i] = toupper(sponge[i]);
-    }
+    sponge[i] = bob ? tolower(sponge[i]) : toupper(sponge[i]);
   }
 
-  cout << sponge;
+  std::cout << sponge;
 
   return 0;
 }

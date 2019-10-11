@@ -5,7 +5,8 @@
 int main()
 {
   std::string sponge;
-  cout << "input: "
+  
+  cout << "input: ";
   getline(std::cin, sponge);
 
   for (int i = 0, bob = 0; i < sponge.length(); ++i, bob = rand() & 1)
